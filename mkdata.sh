@@ -1,8 +1,8 @@
 #!/bin/bash
 
+# create the JSON files delivering the summarized mempool
+
 MEMPOOL=mempool.log
-DESTDIR=/dev/shm/mempool-btc
-mkdir -p $DESTDIR
 
 createfile() {
   (echo 'call(['; eval "$CMD"; echo '])') > $DESTDIR/$NAME.js.new
